@@ -1,8 +1,8 @@
 /**
- * Calculates the percentage change between two numbers.
+ * Calculates the percentage change between two numbers, and returns it as a positive number.
  * @param startAmount
  * @param endAmount
- * @returns {number} Percentage change as a positive number.
+ * @returns {number}
  */
 function percentageChange(startAmount, endAmount){
     if(startAmount >= endAmount){
