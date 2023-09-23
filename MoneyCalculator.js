@@ -24,3 +24,7 @@ function inflationAdjusted(amount, inflationPercentage, years){
     return Math.round(amount / (1 + inflationPercentage / 100) ** years)
 }
 
+function afterReturn(amount, returnPercentage){
+    return Math.round( amount * (1 + returnPercentage / 100))
+}
+
