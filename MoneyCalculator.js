@@ -24,7 +24,26 @@ function inflationAdjusted(amount, inflationPercentage, years){
     return Math.round(amount / (1 + inflationPercentage / 100) ** years)
 }
 
-function afterReturn(amount, returnPercentage){
-    return Math.round( amount * (1 + returnPercentage / 100))
+/**
+ * Calculates the amount accumulated after a number of years, given a starting amount, yearly amount (given every year)
+ * and percentage return (same every year). Then returns that amount rounded to a whole number.
+ * @param startAmount
+ * @param yearlyAmount
+ * @param returnPercentage
+ * @param years
+ * @returns {number}
+ */
+function afterReturns(startAmount, yearlyAmount, returnPercentage, years){
+    if (arguments.length == 4){
+        let currentAmount = startAmount
+        for (let i = 0; i < years; i++) {
+            currentAmount =  (currentAmount + yearlyAmount) * (1 + returnPercentage / 100)
+        return Math.round(currentAmount)
+        }
+    }else{
+        console.log('Wrong number of arguments')
+    }
+
 }
+
 
