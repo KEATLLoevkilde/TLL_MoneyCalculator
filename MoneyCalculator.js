@@ -12,4 +12,15 @@ function percentageChange(startAmount, endAmount){
     }
 }
 
-console.log(percentageChange(100,110))
+/**
+ * Calculates what an amount of money will be woth after a given number of years, at a given inflation rate (%)
+ * and returns that amount as a whole rounded number.
+ * @param amount
+ * @param inflationPercentage
+ * @param years
+ * @returns {number}
+ */
+function inflationAdjusted(amount, inflationPercentage, years){
+    return Math.round(amount / (1 + inflationPercentage / 100) ** years)
+}
+
